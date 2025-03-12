@@ -30,6 +30,7 @@ export function EmojiImg({
       loading={lazyLoad ? 'lazy' : 'eager'}
       onError={onError}
       style={style}
+      crossorigin="anonymous"
     />
   );
 }
