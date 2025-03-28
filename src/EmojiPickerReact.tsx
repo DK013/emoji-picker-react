@@ -49,7 +49,7 @@ function ContentControl() {
   return (
     <PickerMain>
       <Reactions />
-      <ExpandedPickerContent renderAll={renderAll} />
+      {allowExpandReactions && <ExpandedPickerContent renderAll={renderAll} />}
     </PickerMain>
   );
 }

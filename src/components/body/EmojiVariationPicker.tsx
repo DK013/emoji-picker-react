@@ -106,7 +106,7 @@ export function EmojiVariationPicker() {
   );
 }
 
-function usePointerStyle(VariationPickerRef: React.RefObject<HTMLElement>) {
+function usePointerStyle(VariationPickerRef: React.MutableRefObject<HTMLDivElement | null>) {
   const AnchoredEmojiRef = useAnchoredEmojiRef();
   return function getPointerStyle() {
     const style: React.CSSProperties = {};
@@ -132,7 +132,7 @@ function usePointerStyle(VariationPickerRef: React.RefObject<HTMLElement>) {
 }
 
 function useVariationPickerTop(
-  VariationPickerRef: React.RefObject<HTMLElement>
+  VariationPickerRef: React.MutableRefObject<HTMLDivElement | null>
 ) {
   const AnchoredEmojiRef = useAnchoredEmojiRef();
   const BodyRef = useBodyRef();
